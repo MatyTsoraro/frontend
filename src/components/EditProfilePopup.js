@@ -18,20 +18,20 @@ const EditProfilePopup = ({ isLoading, isOpen, onClose, onUpdateUser }) => {
   const handleDescriptionChange = (e) => {
     setDescription(e.target.value);
   };
-  function handleSubmit(e) {
-    e.preventDefault();
-    onUpdateUser({
-      name,
-      about: description,
-    });
-  }
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  //   onUpdateUser({
+  //     name,
+  //     about: description,
+  //   });
+  // }
   return (
     <PopupWithForm
       title="Edit profile"
       name="popup-edit-profile"
       isOpen={isOpen}
       onClose={onClose}
-      onSubmit={handleSubmit}
+      // onSubmit={handleSubmit}
       buttonText={isLoading ? "Saving..." : "Save"}
     >
       <fieldset className="form__fieldset">
