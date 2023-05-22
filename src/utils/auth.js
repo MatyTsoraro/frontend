@@ -1,4 +1,4 @@
-const BASE_URL = 'https://register.nomoreparties.co';
+const BASE_URL = 'https://react-around-api-full-five.vercel.app';
 
 const customFetch = (url, headers) => {
   return fetch(url, headers).then((res) =>

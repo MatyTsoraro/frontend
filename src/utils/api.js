@@ -23,7 +23,7 @@ class Api {
   setUserInfo({ name, about }) {
     return fetch(`${this._baseUrl}/users/me`, {
       headers: this._headers,
-      method: "PATCH",
+      method: 'PATCH',
       body: JSON.stringify({
         name: name,
         about: about,
@@ -33,14 +33,14 @@ class Api {
   createCard(data) {
     return fetch(`${this._baseUrl}/cards`, {
       headers: this._headers,
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify(data),
     }).then(this._checkResponse);
   }
   deleteCard(cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}`, {
       headers: this._headers,
-      method: "DELETE",
+      method: 'DELETE',
     }).then(this._checkResponse);
   }
 
@@ -48,12 +48,12 @@ class Api {
     if (!isLiked) {
       return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
         headers: this._headers,
-        method: "DELETE",
+        method: 'DELETE',
       }).then(this._checkResponse);
     } else {
       return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
         headers: this._headers,
-        method: "PUT",
+        method: 'PUT',
       }).then(this._checkResponse);
     }
   }
@@ -61,7 +61,7 @@ class Api {
   setUserAvatar(url) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       headers: this._headers,
-      method: "PATCH",
+      method: 'PATCH',
       body: JSON.stringify({
         avatar: url,
       }),
@@ -72,10 +72,10 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: "https://around.nomoreparties.co/v1/cohort-3-en", //cohort-3-en
+  baseUrl: 'https://react-around-api-full-five.vercel.app/v1/cohort-3-en', //cohort-3-en
   headers: {
-    authorization: "f0c06eb5-f66f-4f1d-b700-3920553239f3",
-    "Content-Type": "application/json",
+    authorization: 'f0c06eb5-f66f-4f1d-b700-3920553239f3',
+    'Content-Type': 'application/json',
   },
 });
 export default api;
