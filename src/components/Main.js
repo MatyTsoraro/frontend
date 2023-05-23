@@ -14,34 +14,34 @@ const Main = ({
   const currentUser = useContext(CurrentUserContext);
 
   return (
-    <main className='content'>
-      <section className='profile'>
-        <div onClick={onEditAvatarClick} className='profile__image-container'>
+    <main className="content">
+      <section className="profile">
+        <div onClick={onEditAvatarClick} className="profile__image-container">
           <img
-            src={currentUser.avatar}
-            alt='Profile Picture'
-            className='profile__image'
+            src="https://pictures.s3.yandex.net/resources/avatar_1604080799.jpg"
+            alt="Profile Picture"
+            className="profile__image"
           />
         </div>
-        <div className='profile__info'>
-          <div className='profile__person'>
-            <h1 className='profile__name'>{currentUser.name}</h1>
+        <div className="profile__info">
+          <div className="profile__person">
+            <h1 className="profile__name">{currentUser.name}</h1>
             <button
               onClick={onEditProfileClick}
-              className='profile__edit-button'
-              type='button'
+              className="profile__edit-button"
+              type="button"
             />
           </div>
-          <p className='profile__title'>{currentUser.about}</p>
+          <p className="profile__title">{currentUser.about}</p>
         </div>
         <button
           onClick={onAddPlaceClick}
-          className='profile__add-button'
-          type='button'
+          className="profile__add-button"
+          type="button"
         />
       </section>
-      <section className='cards'>
-        <ul className='cards__list'>
+      <section className="cards">
+        <ul className="cards__list">
           {cards.map((card) => {
             return (
               <Card
