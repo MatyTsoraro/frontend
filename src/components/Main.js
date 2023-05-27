@@ -42,7 +42,7 @@ const Main = ({
       </section>
       <section className="cards">
         <ul className="cards__list">
-          {cards.map((card) => {
+          {cards?.map((card) => {
             return (
               <Card
                 card={card}
